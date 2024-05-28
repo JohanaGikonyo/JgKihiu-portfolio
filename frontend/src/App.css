@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+.name {
+  writing-mode: vertical-rl;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: rgb(77, 241, 241);
+
+}
+
+/* App.css */
+
+
+
+
+
+.right-menu .name:hover {
+  color: #d1d5db;
+  cursor: pointer;
+  /* Text color on hover */
+}
+
+/* .main-content {
+  margin-left: 5rem;
+
+} */
+
+.real-world,
+.tech {
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+.real-world::after,
+.tech::after {
+
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  background-color: rgb(6, 207, 207);
+  height: 2px;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.real-world:hover::after,
+.tech:hover::after {
+  width: 100%;
+}
