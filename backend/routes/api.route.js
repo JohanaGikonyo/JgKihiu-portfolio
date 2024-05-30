@@ -62,7 +62,7 @@ router.post('/user', async (req, res, next) => {
         const ownerMailOptions = {
             from: email,
             to: process.env.EMAIL_USER,
-            subject: "Message received from portfolio",
+            subject: "Message received from portfolio Website",
             text: `${message}`
         };
 
