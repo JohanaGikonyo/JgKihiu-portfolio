@@ -1,23 +1,25 @@
-const express = require('express')
-const { PrismaClient } = require('@prisma/client')
-const nodemailer = require('nodemailer')
-const router = express.Router()
-const prisma = new PrismaClient()
+const express = require('express');
+const { PrismaClient } = require('@prisma/client');
+const nodemailer = require('nodemailer');
+const router = express.Router();
+const prisma = new PrismaClient();
+
 prisma.$connect()
     .then(() => {
-        console.log("Database Connected Successfully")
+        console.log("Database Connected Successfully");
     })
     .catch((e) => {
         console.error("An error occurred connecting to the database", e);
-    })
+    });
+
 router.get('/', async (req, res, next) => {
     try {
-        res.send({ message: "Api Successfully Created!" })
+        res.send({ message: "Api Successfully Created!" });
     } catch (error) {
-        next({ status: 404, message: error.message || "Page Not Found!" })
+        next({ status: 404, message: error.message || "Page Not Found!" });
     }
+});
 
-})
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -31,90 +33,59 @@ const transporter = nodemailer.createTransport({
 router.post('/user', async (req, res, next) => {
     const { email, message } = req.body;
     try {
-        const checkUSer = await prisma.user.findUnique({ where: { email: email } })
-        if (checkUSer) {
+        const checkUser = await prisma.user.findUnique({ where: { email } });
+        if (checkUser) {
             await prisma.user.update({
-                where: { email: email },
+                where: { email },
                 data: {
                     message: { push: message }
                 }
-
-            })
-
-            //send email
-            const mailOptions = {
-                from: process.env.EMAIL_USER,
-                to: email,
-                subject: "Message Confirmation",
-                text: `Thank you for sending ${message} We appreciate for you reaching out to us.Your message is safe, We shall reach out to you soon. `
-
-            }
-            const ownermailoptions = {
-                from: email,
-                to: process.env.EMAIL_USER,
-                subject: "Message received from portfolio",
-                text: `${message} `
-
-            }
-            transporter.sendMail(ownermailoptions, owner, (error, info) => {
-                if (error) {
-                    console.error("An erreor ocurred", error)
-                }
-                else {
-                    console.log("Email sent", info.response)
-                }
-            })
-            transporter.sendMail(mailOptions, owner, (error, info) => {
-                if (error) {
-                    console.error("An erreor ocurred", error)
-                }
-                else {
-                    console.log("Email sent", info.response)
-                }
-            })
-            res.json("successful")
-        }
-        else {
-            const user = await prisma.user.create({
+            });
+        } else {
+            await prisma.user.create({
                 data: {
-                    email: email, message: [message]
+                    email,
+                    message: [message]
                 }
-            })
-            const ownermailoptions = {
-                from: email,
-                to: process.env.EMAIL_USER,
-                subject: "Message received from portfolio",
-                text: `${message} `
-
-            }
-            //send email
-            const mailOptions = {
-                from: process.env.EMAIL_USER,
-                to: email,
-                subject: "Message Confirmation",
-                text: `Thank you for sending ${message} We appreciate for you reaching out to us.Your message is safe, We shall reach out to you soon. `
-            }
-            transporter.sendMail(mailOptions, (error, info) => {
-                if (error) {
-                    console.error("An erreor ocurred", error)
-                }
-                else {
-                    console.log("Email sent", info.response)
-                }
-            })
-            transporter.sendMail(ownermailoptions, (error, info) => {
-                if (error) {
-                    console.error("An erreor ocurred", error)
-                }
-                else {
-                    console.log("Email sent", info.response)
-                }
-            })
-            res.json("successful")
+            });
         }
+
+        // Send confirmation email to user
+        const userMailOptions = {
+            from: process.env.EMAIL_USER,
+            to: email,
+            subject: "Message Confirmation",
+            text: `Thank you for sending ${message}. We appreciate you reaching out to us. Your message is safe, and we shall reach out to you soon.`
+        };
+
+        // Send email notification to owner
+        const ownerMailOptions = {
+            from: email,
+            to: process.env.EMAIL_USER,
+            subject: "Message received from portfolio",
+            text: `${message}`
+        };
+
+        transporter.sendMail(userMailOptions, (error, info) => {
+            if (error) {
+                console.error("An error occurred while sending confirmation email", error);
+            } else {
+                console.log("Confirmation email sent", info.response);
+            }
+        });
+
+        transporter.sendMail(ownerMailOptions, (error, info) => {
+            if (error) {
+                console.error("An error occurred while sending notification email", error);
+            } else {
+                console.log("Notification email sent", info.response);
+            }
+        });
+
+        res.json("successful");
     } catch (error) {
-        next(error)
+        next(error);
     }
-})
+});
 
 module.exports = router;
