@@ -34,7 +34,7 @@ router.post('/user', async (req, res, next) => {
         else {
             const user = await prisma.user.create({
                 data: {
-                    email: email, message: message
+                    email: email, message: [message]
                 }
             })
             res.json("successful")
