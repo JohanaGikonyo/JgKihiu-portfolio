@@ -80,7 +80,7 @@ function Section4() {
                         <h1 className='text-slate-100 text-3xl mb-10'>Hire Me</h1>
                         <p className='text-slate-400'>
                             I am currently open to new opportunities where I can employ my skills,
-                            preferably in fast-paced startups or any place that offers me an opportunity
+                            preferably in fast-paced startups or <br />any place that offers me an opportunity
                             to learn and grow as a software engineer. Sounds like you?
                         </p>
                     </div>
@@ -145,8 +145,8 @@ function Section4() {
                         Let`s connect
                     </button>
                 </a>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 
