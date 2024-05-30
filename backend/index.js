@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors')
 const app = express()
 const corsOptions = {
-    origin: ['https://johanakihiu.vercel.app/', 'http://localhost:5173'],
+    origin: ['https://johanakihiu.vercel.app', 'http://localhost:5173'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionSuccessStatus: 200
