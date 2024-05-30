@@ -49,13 +49,21 @@ router.post('/user', async (req, res, next) => {
                 text: `Thank you for sending ${message} We appreciate for you reaching out to us.Your message is safe, We shall reach out to you soon. `
 
             }
-            const owner = {
+            const ownermailoptions = {
                 from: email,
                 to: process.env.EMAIL_USER,
                 subject: "Message received from portfolio",
                 text: `${message} `
 
             }
+            transporter.sendMail(ownermailoptions, owner, (error, info) => {
+                if (error) {
+                    console.error("An erreor ocurred", error)
+                }
+                else {
+                    console.log("Email sent", info.response)
+                }
+            })
             transporter.sendMail(mailOptions, owner, (error, info) => {
                 if (error) {
                     console.error("An erreor ocurred", error)
@@ -72,7 +80,7 @@ router.post('/user', async (req, res, next) => {
                     email: email, message: [message]
                 }
             })
-            const owner = {
+            const ownermailoptions = {
                 from: email,
                 to: process.env.EMAIL_USER,
                 subject: "Message received from portfolio",
@@ -86,7 +94,15 @@ router.post('/user', async (req, res, next) => {
                 subject: "Message Confirmation",
                 text: `Thank you for sending ${message} We appreciate for you reaching out to us.Your message is safe, We shall reach out to you soon. `
             }
-            transporter.sendMail(mailOptions, owner, (error, info) => {
+            transporter.sendMail(mailOptions, (error, info) => {
+                if (error) {
+                    console.error("An erreor ocurred", error)
+                }
+                else {
+                    console.log("Email sent", info.response)
+                }
+            })
+            transporter.sendMail(ownermailoptions, (error, info) => {
                 if (error) {
                     console.error("An erreor ocurred", error)
                 }
