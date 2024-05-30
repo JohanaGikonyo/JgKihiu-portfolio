@@ -20,12 +20,25 @@ router.get('/', async (req, res, next) => {
 router.post('/user', async (req, res, next) => {
     const { email, message } = req.body;
     try {
-        const user = await prisma.user.create({
-            data: {
-                email: email, message: message
-            }
-        })
-        res.json("successful")
+        const checkUSer = await prisma.user.findUnique({ where: { email: email } })
+        if (checkUSer) {
+            await prisma.user.update({
+                where: { email: email },
+                data: {
+                    message: { push: message }
+                }
+
+            })
+            res.json("successful")
+        }
+        else {
+            const user = await prisma.user.create({
+                data: {
+                    email: email, message: message
+                }
+            })
+            res.json("successful")
+        }
     } catch (error) {
         next(error)
     }
