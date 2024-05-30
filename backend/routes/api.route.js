@@ -60,10 +60,10 @@ router.post('/user', async (req, res, next) => {
 
         // Send email notification to owner
         const ownerMailOptions = {
-            from: email,
+            from: email,  // Use the sender's email here
             to: process.env.EMAIL_USER,
-            subject: "Message received from portfolio Website",
-            text: `${message}`
+            subject: "Message received from portfolio",
+            text: `You have received a new message from ${email}: ${message}`
         };
 
         transporter.sendMail(userMailOptions, (error, info) => {
