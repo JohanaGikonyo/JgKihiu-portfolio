@@ -35,7 +35,7 @@ function Section4() {
         if (email !== "" && message !== "") {
             setCircularprogress(true);
             try {
-                const response = await axios.post("http://localhost:3000/api/user", {
+                const response = await axios.post("https://jgkihiu-portfolio.onrender.com/api/user", {
                     email, message
                 });
                 if (response.data === "successful") {
