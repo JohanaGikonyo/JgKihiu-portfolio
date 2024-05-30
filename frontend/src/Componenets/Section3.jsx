@@ -3,17 +3,17 @@ import img2 from './images/cluster.png'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew'; function Section3() {
     return (
-        <div className="text-slate-400 ml-5 ">
+        <div className="text-slate-400 ml-5 mt-40">
             <div >
                 <span className="flex items-center gap-4 mt-10 text-3xl text-slate-300">
                     <h1 className='flex'><span className="text-teal-400">03.</span>My Projects</h1>
-                    <div className="lg:w-60 w-40 bg-slate-400 h-0.5"></div>
+                    <div className="lg:w-60  bg-slate-400 h-0.5"></div>
                 </span>
             </div>
-            <div className='flex lg:flex-row flex-col items-center  justify-around'>
-                <div className='relative flex flex-col gap-0'>
+            <div className='flex lg:flex-row flex-col items-center  justify-around '>
+                <div className='relative flex flex-col gap-0 mb-10 '>
                     <a href="https://mule-foods.vercel.app/">  <img src={img1} alt="" className='h-60  w-80 object-contain rounded-lg p-2' /></a>
-                    <div className='bg-slate-300 text-black rounded-lg p-2 absolute top-[75%] lg:top-20 lg:left-[50%] lg:right-[-50%]  flex flex-col'>
+                    <div className='bg-slate-300 text-black rounded-lg p-2 absolute top-[72%] lg:top-20 lg:left-[50%] lg:right-[-50%]  flex flex-col'>
 
                         <p>Mule Foods is an e-commerce Website, where clients can order their Food items from their desired Location.
                             It makes ordering easier than a phone call.I have participated as a developer, and I have been maintaining it.

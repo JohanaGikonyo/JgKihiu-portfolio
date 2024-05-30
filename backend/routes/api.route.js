@@ -17,5 +17,18 @@ router.get('/', async (req, res, next) => {
     }
 
 })
+router.post('/user', async (req, res, next) => {
+    const { email, message } = req.body;
+    try {
+        const user = await prisma.user.create({
+            data: {
+                email: email, message: message
+            }
+        })
+        res.json("successful")
+    } catch (error) {
+        next(error)
+    }
+})
 
 module.exports = router;

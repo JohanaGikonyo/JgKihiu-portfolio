@@ -39,7 +39,7 @@ function App() {
 
       {/* Main content */}
       < Navbar />
-      <div className="main-content flex-1 lg:ml-16 ml-10">
+      <div className="main-content flex-1 lg:ml-16 m-10">
 
 
         <div id="home"><Home /></div>

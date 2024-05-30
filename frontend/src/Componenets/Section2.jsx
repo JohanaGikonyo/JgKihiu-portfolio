@@ -4,7 +4,7 @@ function Section2() {
     const [activeSection, setActiveSection] = useState('surestep');
 
     return (
-        <div className="flex flex-col lg:p-10 lg:ml-20 ">
+        <div className="flex flex-col lg:p-10 lg:ml-20 mt-40 ">
             <div className="mb-10 ">
                 <span className="flex items-center gap-4 text-3xl text-slate-300">
                     <h1 className='flex'><span className="text-teal-400">02.</span> Experience</h1>

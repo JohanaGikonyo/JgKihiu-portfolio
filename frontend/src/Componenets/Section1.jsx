@@ -6,7 +6,7 @@ function Section1() {
         < div className="lg:flex lg:flex-row flex-col justify-between lg:m-10 mt-10 lg:p-10  text-slate-400 items-start gap-5" >
             <div>
                 <div className="text-slate-400 mb-10">
-                    <span className="flex flex-row items-center lg:gap-10 gap-4 text-3xl text-slate-300"><h1 ><span className="text-teal-400">01.</span>About Me</h1><div className="lg:w-60 bg-slate-400 w-40 h-0.5"></div></span>
+                    <span className="flex flex-row justify-between items-center lg:gap-10 gap-4 text-3xl text-slate-300"><h1 ><span className="text-teal-400">01.</span>About Me</h1><div className="lg:w-60 bg-slate-400  h-0.5"></div></span>
                 </div>
                 <div className="text-xl">
                     <p>Hello! My name is Johana Gikonyo .I`m an ardent tech enthusiast from Nairobi Kenya, driven by an insatiable curiosity for all things digital.
