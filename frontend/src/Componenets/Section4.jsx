@@ -57,7 +57,7 @@ function Section4() {
         <div className='flex flex-col justify-around items-center mt-40 mb-10 gap-4'>
             <Box sx={{ width: 500 }}>
                 <Snackbar
-                    anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+                    anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
                     open={snackbar.open}
                     onClose={handleSnackbarClose}
                     // message={snackbar.message}
@@ -66,7 +66,7 @@ function Section4() {
                 >
                     <SnackbarContent
                         message={snackbar.message}
-                        sx={{ backgroundColor: 'blue', color: "white" }}
+                        sx={{ backgroundColor: 'teal', color: "white" }}
                     />
                 </Snackbar>
             </Box>
