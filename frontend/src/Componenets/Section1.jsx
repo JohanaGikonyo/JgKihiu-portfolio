@@ -39,7 +39,7 @@ function Section1() {
         </div>
         <div className="text-xl mt-5 lg:flex items-center gap-1">
           <h1 className="text-xl  font-extrabold">Backend FrameWorks:</h1>I have majorly Used{" "}
-          <span className="text-teal-400">Prisma</span> and <span className="text-teal-400">Express</span>
+          <span className="text-teal-400">Django</span>and <span className="text-teal-400">Express</span>
         </div>
         <div className="text-xl mt-5 lg:flex items-center gap-1">
           <h1 className="text-xl  font-extrabold">Databases:</h1>
