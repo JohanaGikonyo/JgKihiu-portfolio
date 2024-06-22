@@ -79,7 +79,7 @@ function Section1() {
                 <span>
                   <BoltIcon className="text-teal-400" />
                 </span>
-                Python Django
+                Prisma
               </li>
             </div>
           </ul>
