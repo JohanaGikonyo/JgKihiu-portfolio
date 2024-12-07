@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import { Chip } from '@mui/material';
 import { Link } from 'react-scroll';// Import from react-scroll
 import DrawerNavigator from './Drawer';
-import resume from '../../../assets/documents/Johana resume.docx'
+import resume from '../../../assets/documents/Resume.pdf'
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
         backgroundColor: '#44b700',

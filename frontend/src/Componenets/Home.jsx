@@ -1,4 +1,4 @@
-import resume from '../../assets/documents/Johana resume.docx'
+import resume from '../../assets/documents/Resume.pdf'
 
 function Home() {
     return (
