@@ -7,7 +7,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 function Section3() {
   return (
-    <div className="text-slate-400 px-5 lg:px-20 py-16 ">
+    <div className="text-slate-400 px-5 lg:px-20 pt-16 ">
       {/* Section Title */}
       <div className="mb-12">
         <div className="flex items-center gap-4">

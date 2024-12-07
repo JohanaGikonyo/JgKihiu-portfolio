@@ -54,7 +54,7 @@ function Section4() {
     };
 
     return (
-        <div className='flex flex-col justify-around items-center mt-40 mb-10 gap-4'>
+        <div className='flex flex-col justify-around items-center mt-24 mb-10 gap-4'>
             <Box sx={{ width: 500 }}>
                 <Snackbar
                     anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
