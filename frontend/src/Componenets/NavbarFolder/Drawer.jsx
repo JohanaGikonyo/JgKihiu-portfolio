@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import { Link } from 'react-scroll';
 import SegmentIcon from '@mui/icons-material/Segment';
+import resume from '../../../assets/documents/Resume.pdf'
 
 function DrawerNavigator() {
     const [open, setOpen] = useState(false);
@@ -40,7 +41,9 @@ function DrawerNavigator() {
                 <Link to="section4" spy={true} smooth={true} offset={-70} duration={500} onClick={toggleDrawer(false)}>
                     <small className='flex flex-row items-center justify-around'><span className='text-teal-400'>04.</span> Contact</small>
                 </Link>
-                <button className='text-teal-400 border rounded-md p-1 border-teal-400'>Resume</button>
+                <button className='text-teal-400 border rounded-md p-1 border-teal-400'> <a href={resume} download rel="noopener noreferrer" >
+                    Resume
+                </a></button>
             </div>
 
             <Divider />
