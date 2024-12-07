@@ -27,15 +27,15 @@ function Section1() {
           </p>
         </div>
         <div className="text-xl mt-5">
-          <p>I major in Website development with proficiency in the following technologies and tools:</p>
+          <p>I major in Website/Android development and Data Science&ML  with proficiency in the following technologies and tools:</p>
         </div>
         <div className="text-xl mt-5 lg:flex items-center gap-1">
           <h1 className="text-xl  font-extrabold">Programming Languages: </h1>I have much grasp of{" "}
-          <span className="text-teal-400">JavaScript </span> and <span className="text-teal-400">Typescript</span>
+          <span className="text-teal-400">JavaScript </span> ,<span className="text-teal-400">Typescript</span>, <span className="text-teal-400">Python</span>
         </div>
         <div className="text-xl mt-5 lg:flex items-center gap-1">
           <h1 className="text-xl  font-extrabold">Front-end FrameWorks:</h1>I majorly Use{" "}
-          <span className="text-teal-400">React js and Next Js</span>
+          <span className="text-teal-400">React js , Next Js and React Native</span>
         </div>
         <div className="text-xl mt-5 lg:flex items-center gap-1">
           <h1 className="text-xl  font-extrabold">Backend FrameWorks:</h1>I have majorly Used{" "}
@@ -60,6 +60,12 @@ function Section1() {
                   <BoltIcon className="text-teal-400" />
                 </span>
                 Tailwind
+              </li>
+              <li>
+                <span>
+                  <BoltIcon className="text-teal-400" />
+                </span>
+                Pandas, Numpy
               </li>
             </div>
             <div>
