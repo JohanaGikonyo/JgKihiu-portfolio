@@ -8,7 +8,7 @@ function Home() {
             <h1 className="text-slate-400 font-extrabold text-5xl">I am a Software Engineer.</h1>
             <div>
                 <h2>
-                    I am a Software Engineer with 2+ years of experience and fervent tech enthusiast.
+                    I am a Software Engineer with 4+ years of experience and fervent tech enthusiast.
                     <br />
                     My expertise lies in translating
 
