@@ -1,118 +1,150 @@
 import img1 from "./images/e-commerce.png";
 import img2 from "./images/cluster.png";
 import img3 from "./images/travel.png";
-import img4 from './images/brain_bird.png'
+import img4 from "./images/brain_bird.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+
 function Section3() {
   return (
-    <div className="text-slate-400 ml-5 mt-40">
-      <div>
-        <span className="flex items-center gap-4 mt-10 text-3xl text-slate-300">
-          <h1 className="flex">
-            <span className="text-teal-400">03.</span>My Projects
+    <div className="text-slate-400 px-5 lg:px-20 py-16 ">
+      {/* Section Title */}
+      <div className="mb-12">
+        <div className="flex items-center gap-4">
+          <h1 className="flex items-center text-3xl text-slate-300 font-semibold">
+            <span className="text-teal-400 mr-2">03.</span>My Projects
           </h1>
-          <div className="lg:w-60  bg-slate-400 h-0.5"></div>
-        </span>
+          <div className="flex-grow h-0.5 bg-slate-500"></div>
+        </div>
       </div>
-      <div className="flex lg:flex-row flex-col items-center gap-5  justify-around lg:flex-wrap">
 
-      <div className="relative ">
+      {/* Projects Grid */}
+      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Brain Bird Project */}
+        <div className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
           <a href="https://brain-bird.vercel.app/">
-            {" "}
-            <img src={img4} alt="" className="h-60  w-80 object-contain rounded-lg p-2" />
+            <img
+              src={img4}
+              alt="Brain Bird"
+              className="h-60 w-full object-cover"
+            />
           </a>
-          <div className="bg-slate-300 text-black rounded-lg p-2 absolute -my-20   flex flex-col">
-            <p>
-            Brain-Bird is a social PWA designed for everyone to connect with like-minded people from around the world. Spark discussions, share your ideas, and build your network. Create posts, view feeds, manage your profile, and more. Meet new friends, find mentors, or collaborate with potential clients. Join public communities or chat privately. Brain-Bird offers a seamless and engaging experience, accessible from any device.</p>
-            <div className="flex justify-end">
-              <a href="https://github.com/JohanaGikonyo/brain_bird">
-                <GitHubIcon />
+          <div className="absolute inset-0 bg-slate-900/95 opacity-0 group-hover:opacity-100 transition duration-300 p-5 flex flex-col justify-between">
+            <p className="text-sm text-slate-300">
+              Brain-Bird is a social PWA designed for everyone to connect with
+              like-minded people from around the world. Spark discussions,
+              share your ideas, and build your network.
+            </p>
+            <div className="flex gap-4 justify-end mt-4">
+              <a
+                href="https://github.com/JohanaGikonyo/brain_bird"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <GitHubIcon fontSize="small" />
               </a>
-
-              <span>
-                <a href="https://brain-bird.vercel.app/">
-                  <OpenInNewIcon />
-                </a>
-              </span>
+              <a
+                href="https://brain-bird.vercel.app/"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <OpenInNewIcon fontSize="small" />
+              </a>
             </div>
           </div>
         </div>
 
-
-        <div className="relative mt-40 lg:mt-0">
+        {/* Mule Foods Project */}
+        <div className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
           <a href="https://mulefoods.com/">
-            {" "}
-            <img src={img1} alt="" className="h-60  w-80 object-contain rounded-lg p-2" />
+            <img
+              src={img1}
+              alt="Mule Foods"
+              className="h-60 w-full object-cover"
+            />
           </a>
-          <div className="bg-slate-300 text-black rounded-lg p-2 absolute -my-20   flex flex-col">
-            <p>
-            Mule Foods simplifies your grocery shopping experience. Order your favorite food items online from your preferred local stores and have them delivered right to your doorstep. Say goodbye to the hassle of phone calls and long queues.
+          <div className="absolute inset-0 bg-slate-900/95 opacity-0 group-hover:opacity-100 transition duration-300 p-5 flex flex-col justify-between">
+            <p className="text-sm text-slate-300">
+              Mule Foods simplifies your grocery shopping experience. Order
+              your favorite food items online from your preferred local stores
+              and have them delivered right to your doorstep.
             </p>
-            <div className="flex justify-end">
-              <a href="https://github.com/JohanaGikonyo/Mule-Foods">
-                <GitHubIcon />
+            <div className="flex gap-4 justify-end mt-4">
+              <a
+                href="https://github.com/JohanaGikonyo/Mule-Foods"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <GitHubIcon fontSize="small" />
               </a>
-
-              <span>
-                <a href="https://mulefoods.com/">
-                  <OpenInNewIcon />
-                </a>
-              </span>
+              <a
+                href="https://mulefoods.com/"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <OpenInNewIcon fontSize="small" />
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="relative mt-16 lg:mt-0">
-          <div className="">
-            <a href="https://traveapp.vercel.app/">
-              {" "}
-              <img src={img3} alt="" className="h-80 w-80 object-contain rounded-lg p-2 " />
-            </a>
-          </div>
-          <div className="bg-slate-300 text-black rounded-lg p-2 absolute -my-20">
-            <p>
-            Hilink: Your Personalized Travel Companion <br></br>
-
-Experience the world with Hilink, your go-to travel app. Discover stunning destinations, plan your trips with ease, and book unforgettable experiences.
+        {/* Travel App Project */}
+        <div className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+          <a href="https://traveapp.vercel.app/">
+            <img
+              src={img3}
+              alt="Travel App"
+              className="h-60 w-full object-cover"
+            />
+          </a>
+          <div className="absolute inset-0 bg-slate-900/95 opacity-0 group-hover:opacity-100 transition duration-300 p-5 flex flex-col justify-between">
+            <p className="text-sm text-slate-300">
+              Hilink: Your Personalized Travel Companion. Experience the world
+              with Hilink, your go-to travel app. Discover stunning
+              destinations, plan your trips with ease, and book unforgettable
+              experiences.
             </p>
-            <div className="flex justify-end items-center m-0.5">
-              <a href="https://github.com/JohanaGikonyo/testapp">
-                <GitHubIcon />
+            <div className="flex gap-4 justify-end mt-4">
+              <a
+                href="https://github.com/JohanaGikonyo/testapp"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <GitHubIcon fontSize="small" />
               </a>
-              <span>
-                {" "}
-                <a href="https://traveapp.vercel.app/">
-                  {" "}
-                  <OpenInNewIcon />{" "}
-                </a>{" "}
-              </span>
+              <a
+                href="https://traveapp.vercel.app/"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <OpenInNewIcon fontSize="small" />
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="relative mt-16 ">
-          <div className="">
-            <a href="https://clustercalculator.vercel.app/">
-              {" "}
-              <img src={img2} alt="" className="h-80 w-80 object-contain rounded-lg p-2 " />
-            </a>
-          </div>
-          <div className="bg-slate-300 text-black rounded-lg p-2 absolute -my-20">
-            <p>
-            Make Informed Course Choices<br></br>
-            Our cluster point calculator helps you easily determine your eligibility for various courses, saving you time and effort. </p>
-            <div className="flex justify-end items-center m-0.5">
-              <a href="https://github.com/JohanaGikonyo/clusterCalculations2024">
-                <GitHubIcon />
+        {/* Cluster Calculator Project */}
+        <div className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+          <a href="https://clustercalculator.vercel.app/">
+            <img
+              src={img2}
+              alt="Cluster Calculator"
+              className="h-60 w-full object-cover"
+            />
+          </a>
+          <div className="absolute inset-0 bg-slate-900/95 opacity-0 group-hover:opacity-100 transition duration-300 p-5 flex flex-col justify-between">
+            <p className="text-sm text-slate-300">
+              Make Informed Course Choices. Our cluster point calculator helps
+              you easily determine your eligibility for various courses, saving
+              you time and effort.
+            </p>
+            <div className="flex gap-4 justify-end mt-4">
+              <a
+                href="https://github.com/JohanaGikonyo/clusterCalculations2024"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <GitHubIcon fontSize="small" />
               </a>
-              <span>
-                {" "}
-                <a href="https://clustercalculator.vercel.app/">
-                  {" "}
-                  <OpenInNewIcon />{" "}
-                </a>{" "}
-              </span>
+              <a
+                href="https://clustercalculator.vercel.app/"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <OpenInNewIcon fontSize="small" />
+              </a>
             </div>
           </div>
         </div>
