@@ -40,7 +40,7 @@ function Section3() {
         </div>
 
 
-        <div className="relative ">
+        <div className="relative mt-40 lg:mt-0">
           <a href="https://mulefoods.com/">
             {" "}
             <img src={img1} alt="" className="h-60  w-80 object-contain rounded-lg p-2" />
