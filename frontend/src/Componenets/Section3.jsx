@@ -2,6 +2,8 @@ import img1 from "./images/e-commerce.png";
 import img2 from "./images/cluster.png";
 import img3 from "./images/travel.png";
 import img4 from "./images/brain_bird.png";
+import img5 from "./images/damil_img.png";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
@@ -20,6 +22,35 @@ function Section3() {
 
       {/* Projects Grid */}
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+          <a href="https://damilfurnitures.vercel.app">
+            <img
+              src={img5}
+              alt="Damil furnitures"
+              className="h-60 w-full object-cover"
+            />
+          </a>
+          <div className="absolute inset-0 bg-slate-900/95 opacity-0 group-hover:opacity-100 transition duration-300 p-5 flex flex-col justify-between">
+            <p className="text-sm text-slate-300">
+             This is an e-cormerce website, where I integrated whatsapp API, to enhance easy ordering of furniture items.
+It has an enhanced UI/UX design, simple and easy to use for the clients.It enhances easy searching for items, and high speed performance.
+            </p>
+            <div className="flex gap-4 justify-end mt-4">
+              <a
+                href="https://github.com/JohanaGikonyo/dawood"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <GitHubIcon fontSize="small" />
+              </a>
+              <a
+                href="https://damilfurnitures.vercel.app"
+                className="text-teal-400 hover:text-teal-300"
+              >
+                <OpenInNewIcon fontSize="small" />
+              </a>
+            </div>
+          </div>
+        </div>
         {/* Brain Bird Project */}
         <div className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
           <a href="https://brain-bird.vercel.app/">
