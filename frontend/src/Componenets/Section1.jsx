@@ -27,7 +27,7 @@ function Section1() {
           </p>
         </div>
         <div className="text-xl mt-5">
-          <p>I major in Website/Android development and Data Science&ML  with proficiency in the following technologies and tools:</p>
+          <p>I major on Website/Android development and Data Science&ML  with proficiency in the following technologies and tools:</p>
         </div>
         <div className="text-xl mt-5 lg:flex items-center gap-1">
           <h1 className="text-xl  font-extrabold">Programming Languages: </h1>I have much grasp of{" "}
