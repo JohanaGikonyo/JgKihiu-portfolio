@@ -14,7 +14,7 @@ function Section1() {
         </div>
         <div className="text-xl">
           <p>
-            Hello! My name is Johana Gikonyo .I`m an ardent tech enthusiast from Nairobi Kenya, driven by an insatiable
+            I`m an ardent tech enthusiast from Nairobi Kenya, driven by an insatiable
             curiosity for all things digital. Technology, to me, is like a canvas of endless creativity waiting to be
             explored. I thrive on the challenges tech presents and am committed to pushing boundaries and crafting a
             future where innovation knows no bounds.
