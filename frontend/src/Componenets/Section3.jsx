@@ -22,7 +22,7 @@ function Section3() {
 
       {/* Projects Grid */}
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-      <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.15}} className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+      <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.3, delay:0.1, ease:[0,0.71,0.2,1.01]}} className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
           <a href="https://damilfurnitures.vercel.app">
             <img
               src={img5}
@@ -52,7 +52,7 @@ It has an enhanced UI/UX design, simple and easy to use for the clients.It enhan
           </div>
         </motion.div>
         {/* Brain Bird Project */}
-        <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.25}} className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+        <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.3, delay:0.1, ease:[0,0.71,0.2,1.01]}} className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
           <a href="https://brain-bird.vercel.app/">
             <img
               src={img4}
@@ -84,7 +84,7 @@ It has an enhanced UI/UX design, simple and easy to use for the clients.It enhan
         </motion.div>
 
         {/* Mule Foods Project */}
-        <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.5}}  className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+        <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.3, delay:0.1, ease:[0,0.71,0.2,1.01]}}  className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
           <a href="https://mulefoods.com/">
             <img
               src={img1}
@@ -116,7 +116,7 @@ It has an enhanced UI/UX design, simple and easy to use for the clients.It enhan
         </motion.div>
 
         {/* Travel App Project */}
-        <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.75}} className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+        <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.3, delay:0.1, ease:[0,0.71,0.2,1.01]}} className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
           <a href="https://traveapp.vercel.app/">
             <img
               src={img3}
@@ -149,7 +149,7 @@ It has an enhanced UI/UX design, simple and easy to use for the clients.It enhan
         </motion.div>
 
         {/* Cluster Calculator Project */}
-        <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:1}} className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
+        <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.3, delay:0.1, ease:[0,0.71,0.2,1.01]}} className="relative group bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
           <a href="https://clustercalculator.vercel.app/">
             <img
               src={img2}

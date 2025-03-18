@@ -3,7 +3,7 @@ import BoltIcon from "@mui/icons-material/Bolt";
 import {motion} from 'framer-motion'
 function Section1() {
   return (
-    <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:1}}  className="lg:flex lg:flex-row flex-col justify-between lg:m-10 mt-10 lg:p-10  text-slate-400 items-start gap-5">
+    <motion.div initial={{opacity:0, scale:0.5}} whileInView={{opacity:1, scale:1}} transition={{duration:0.8, delay:0.1, ease:[0,0.71,0.2,1.01]}}  className="lg:flex lg:flex-row flex-col justify-between lg:m-10 mt-10 lg:p-10  text-slate-400 items-start gap-5">
       <div>
         <div className="text-slate-400 mb-10">
           <span className="flex flex-row justify-between items-center lg:gap-10 gap-4 text-3xl text-slate-300">
