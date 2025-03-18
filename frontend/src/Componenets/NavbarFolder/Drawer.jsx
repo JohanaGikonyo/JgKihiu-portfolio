@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import { Link } from 'react-scroll';
 import SegmentIcon from '@mui/icons-material/Segment';
-import resume from '../../../assets/documents/Resume.pdf'
+import resume from '../../../assets/documents/Resume (1).pdf'
 
 function DrawerNavigator() {
     const [open, setOpen] = useState(false);
