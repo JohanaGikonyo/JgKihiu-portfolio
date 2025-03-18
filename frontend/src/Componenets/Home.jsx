@@ -2,7 +2,7 @@ import resume from '../../assets/documents/Resume (1).pdf'
 
 function Home() {
     return (
-        <div className="text-slate-400 lg:ml-10 lg:p-10 mt-[6%]">
+        <div className="text-slate-400 lg:ml-10  ">
             <p className="text-teal-400 m-5">Jambo <span >👋🏾</span>,My name is</p>
             <h1 className="text-slate-300 font-extrabold text-6xl">JOHANA GIKONYO.</h1>
             <h1 className="text-slate-400 font-extrabold text-5xl">I am a Software Engineer.</h1>
